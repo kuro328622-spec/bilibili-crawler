@@ -54,6 +54,23 @@ B站 的 wbi 接口要求请求带 `w_rid`（签名）+ `wts`（时间戳）—�
 - 混淆代码里**变量名会被改**（社区说的 `img_key` 在代码里其实叫 `o`）→ **搜字符串常量（`wbi_img`、参数名）比搜变量名可靠**
 - 评论是**游标翻页**（`cursor.pagination_reply.next_offset`），不是页码翻页
 
+## 数据分析
+
+`python analyze.py` 会输出统计并生成图表（存到 `charts/`）。
+
+**年度趋势**：平均播放量从 2015 年的 **15.7 万** 增长到 2026 年的 **615 万**（约 39 倍），
+投稿量也从每年 11 个稳定到 100+ 个。
+
+![年度趋势](./charts/01_yearly_trend.png)
+
+**播放量 Top 10：**
+
+![Top10](./charts/03_top10_play.png)
+
+**时长 vs 播放量：**
+
+![时长与播放量](./charts/02_duration_vs_play.png)
+
 ## 说明
 
 仅供学习，不商用。cookie 等凭证通过 `config_local.py` 本地保存，不提交到仓库。
