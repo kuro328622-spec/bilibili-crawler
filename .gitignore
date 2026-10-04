@@ -1,0 +1,16 @@
+# 忽略 Python 缓存
+__pycache__/
+*.pyc
+
+# 忽略虚拟环境
+venv/
+.venv/
+
+# 忽略数据库
+data/*.db
+data/*.db-journal
+
+# ★ 忽略本地凭证（cookie 绝不进仓库！）
+config_local.py
+.env
+*.cookie
